@@ -1,0 +1,16 @@
+/* header-left */
+.head-left input {
+    display: none;
+}
+.head-left .search {
+    display: block;
+}
+
+
+/* header-right */
+.head-right {
+    justify-content: flex-end;
+}
+.head-right .my_container {
+    display: none;
+}

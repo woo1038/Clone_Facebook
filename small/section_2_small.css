@@ -1,0 +1,10 @@
+/* menu */
+.section-2 .section-menu {
+    display: none;
+}
+
+/* main */
+.section-2 .section-main {
+    left: 0;
+    width: 100%;
+}

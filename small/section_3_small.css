@@ -1,0 +1,8 @@
+/* grid 개수 3개만 보이기 */
+.main-container .main-group {
+    grid-template-columns: repeat(2 , 1fr);
+}
+
+.main-group .group-box:nth-child(3) {
+    display: none;
+}

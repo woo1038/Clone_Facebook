@@ -1,0 +1,238 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+.round {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 45%;
+    border: 0.5px solid #e5e5e5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.round img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+button.round:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: black;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+
+.slide {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+.slide .slide-section {
+    position: absolute;
+    top: 60px;
+    width: calc(100% * 4);
+    height: calc(100vh - 60px);
+    display: flex;
+    transition: 1s;
+}
+.slide .section-1,
+.slide .section-2,
+.slide .section-3,
+.slide .section-4 {
+    width: calc(100% / 4);
+    height: 100%;
+}
+.slide #pos1,#pos2,#pos3,#pos4{
+    display:none;
+}
+
+
+
+/* header */
+.slide .slide-btn {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 5px 2px #e5e5e5; 
+    z-index: 10;
+}
+.header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+/* header-left */
+.head-left {
+    width: 310px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.head-left a .round {
+    margin-left: 20px;
+    margin-right: 10px;
+    background-image: url("./images/facebook.png");
+    background-size: 40px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.head-left input {
+    width: 60%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-image: url("./images/search.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 10px;
+    background-color: #e5e5e5;
+    padding: 0 30px;
+    transition: 0.5s;
+}
+.head-left input:focus {
+    outline: none;
+    background-image: none;
+    padding: 0 10px;
+}
+.head-left .search {
+    display: none;
+    background-image: url("./images/search.png");
+    background-size: 20px;
+    background-position: 10px;
+    background-color: #e5e5e5;
+}
+
+
+/* header-center */
+.head-cen {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.slide .slide-btn label {
+    position: relative;
+    width: 15%;
+    height: 100%;
+    transition: 0.5s;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.slide .slide-btn label:hover {
+    background-color: #e5e5e5;
+}
+.slide .slide-btn label i {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -25%);
+    font-size: 30px;
+    color: #696969;
+}
+
+
+/* slide-btn 조작 */
+#pos1:checked~.slide-btn label:nth-child(1),
+#pos2:checked~.slide-btn label:nth-child(2),
+#pos3:checked~.slide-btn label:nth-child(3),
+#pos4:checked~.slide-btn label:nth-child(4) {
+    border-bottom: 5px solid rgb(0, 65, 243);
+}
+/* slide-btn 조작 */
+#pos1:checked~.slide-btn label:nth-child(1) i,
+#pos2:checked~.slide-btn label:nth-child(2) i,
+#pos3:checked~.slide-btn label:nth-child(3) i,
+#pos4:checked~.slide-btn label:nth-child(4) i {
+    color: rgb(0, 65, 243);
+}
+
+
+/* 슬라이드 조작 */
+#pos1:checked~.slide-section {
+    margin-left: 0;
+}
+#pos2:checked~.slide-section {
+    margin-left: -100%;
+}
+#pos3:checked~.slide-section {
+    margin-left: -200%;
+}
+#pos4:checked~.slide-section {
+    margin-left: -300%;
+}
+
+
+
+
+/* header-right */
+.head-right {
+    width: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.head-right .my_container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: auto;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.head-right .my_container:hover {
+    background-color: #f8f8f8;
+}
+.head-right .me {
+    width: 30px;
+    height: 30px;
+    background-image: url("./images/user.png");
+    background-size: contain;
+    background-color: #a5a5a5;
+    margin-right: 5px;
+}
+.head-right .plus {
+    background-image: url("./images/plus.png");
+    margin-right: 10px;
+}
+.head-right .msg {
+    background-image: url("./images/msg.png");
+    margin-right: 10px;
+}
+.head-right .alarm {
+    background-image: url("./images/alarm.png");
+    margin-right: 10px;
+}
+.head-right .more {
+    background-image: url("./images/more.png");
+    margin-right: 10px;
+}
+.head-right button:hover {
+    background-color: #c5c5c5;
+}

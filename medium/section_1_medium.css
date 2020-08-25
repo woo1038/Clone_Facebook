@@ -1,0 +1,12 @@
+/* section-1 좌측 콘텐트 메뉴 */
+.section-1 .section-menu {
+    display: none;
+}
+
+
+/* main */
+.section-1 .section-main {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}

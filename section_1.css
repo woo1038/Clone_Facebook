@@ -1,0 +1,422 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button:focus,
+input:focus {
+    outline: none;
+}
+
+/* 동그라미 */
+.circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 45%;
+    margin-right: 10px;
+    background-color: none;
+}
+
+
+
+/* section */
+.section-1 {
+    position: relative;
+    display: flex;
+}
+
+/* menu */
+.section-menu {
+    position: fixed;
+    width: 20%;
+    min-width: 250px;
+    height: 100%;
+    background: rgb(240, 242, 245);
+}
+/* section-1 좌측 콘텐트 메뉴 */
+.section-1 .menu-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 0 10px;
+    overflow-y: scroll;
+}
+.menu-container .item {
+    display: flex;
+    height: 52px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-container .item:hover {
+    border-radius: 10px;
+    background-color: #e5e5e5;
+}
+.menu-container:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+
+
+
+/* main */
+.section-main {
+    position: absolute;
+    left: 20%;
+    width: calc(100% - 20%);
+    height: calc(100vh - 60px);
+    background: rgb(240, 242, 245);
+    overflow-y: scroll;
+    padding-top: 20px;
+    padding-right: 370px;
+    padding-left: 10px;
+}
+.section-main::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.section-main .main-container {
+    max-width: 700px;
+    margin: 0 auto;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+
+/* mainbox 초기화 */
+.main-box{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.main-box .main-padding {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+
+/* story */
+.main-container .main-story {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.main-story .story-box {
+    position: relative;
+    max-width: 19%;
+    border: none;
+    cursor: pointer;
+}
+.main-story .story-box .story-user {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: 3px solid rgb(0, 65, 243);
+    z-index: 2;
+}
+.main-story .story-box .story-img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.main-story .story-box p {
+    position: absolute;
+    font-weight: 600;
+    color: #fff;
+    bottom: 5%;
+    left: 10%;
+    z-index: 3;
+}
+
+
+/* share */
+.main-container .main-share {
+    width: 100%;
+}
+
+/* share 위에 input */
+.main-padding .share-form {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.share-form .round {
+    margin-right: 10px;
+}
+.share-form input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+/* share && poster 아래 버튼 */
+.main-padding .share-button,
+.main-poster .poster-button {
+    display: flex;
+    padding-top: 10px;
+}
+.share-button button,
+.poster-button button {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.share-button button:hover,
+.poster-button button:hover {
+    background-color: #e5e5e5;
+}
+.share-button button i,
+.poster-button button i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+.share-button button p,
+.poster-button button p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #65676B;
+}
+.share-button button .red {color: rgb(238, 30, 65);}
+.share-button button .green {color: rgb(57, 206, 27);}
+.share-button button .yellow {color: rgb(247, 189, 0);}
+
+
+/* video */
+.main-video .video-title {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.main-video .video-title i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    background: -webkit-linear-gradient(rgb(248, 33, 33), rgb(69, 36, 253));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main-video .video-title span {
+    margin-right: auto;
+    font-weight: 600;
+}
+.main-video .video-title a {
+    color: #1876f2;
+}
+
+.main-video .video-box  {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* poster title */
+.main-poster .poster-title {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.poster-title .round {
+    margin-right: 10px;
+}
+.poster-title .title-text {
+    margin-right: auto;
+}
+.poster-title .title-text h2 {
+    font-size: 1rem;
+    color: #050505;
+}
+.poster-title .title-text h3 {
+    font-size: 0.8rem;
+    color: #65676B;
+}
+.poster-title i {
+    color: #4e4e4e;
+    padding: 10px;
+    cursor: pointer;
+}
+.poster-title i:hover {
+    background-color: #e5e5e5;
+    border-radius: 45%;
+}
+
+/* poster img */
+.main-poster .poster-img {
+    width: 100%;
+}
+.poster-img img {
+    width: 100%;
+}
+.poster-img div {
+    display: grid;
+    gap: 2px;
+    cursor: pointer;
+}
+.poster-img .img-gridTop {
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #e5e5e5;
+}
+.poster-img .img-gridBottom {
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #e5e5e5;
+}   
+
+
+/* display */
+.main-poster .poster-display {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.poster-display .display-emoticon {
+    display: flex;
+    padding: 10px 0;
+    margin-right: auto;
+}
+.poster-display .display-emoticon img {
+    width: 18px;
+}
+.poster-display .display-emoticon p {
+    margin-left: 5px;
+    color: #65676B;
+}
+.poster-display p {
+    color: #65676B;
+}
+
+
+/* button */
+.main-poster .poster-button {
+    padding-top: 10px;
+}
+.poster-button button {
+    height: 30px;
+}
+.poster-button button i {
+    color: #65676B;
+}
+
+
+
+
+
+/* friend */
+.section-friend {
+    position: absolute;
+    right: 10px;
+    width: 350px;
+    height: 100%;
+    background: rgb(240, 242, 245);
+    z-index: 2;
+}
+/* section-1 우측 친구 목록 */
+.section-friend .friend-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 0 10px;
+    overflow-y: scroll;
+}
+.friend-container .item {
+    display: flex;
+    height: 52px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.friend-container .item:hover {
+    border-radius: 10px;
+    background-color: #e5e5e5;
+}
+.friend-container:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* ul태그 위 연락처 */
+.section-friend .community {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+}
+.section-friend .community span {
+    margin-right: auto;
+    color: #65676B;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.section-friend .community .com-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.section-friend .community i {
+    color: #4e4e4e;
+    margin-right: 5px;
+    border: 2px solid rgb(240, 242, 245);
+    padding: 10px;
+}
+.section-friend .community i:hover {
+    background-color: #e5e5e5;
+    border-radius: 45%;
+    cursor: pointer;
+}
+
+
+/* friend 접속표시 */
+.section-friend .item .friend-img {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+.section-friend .item .friend-in {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #21af28;
+    border: 2px solid #fff;
+    border-radius: 45%;
+}
+
+
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: none
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: none;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

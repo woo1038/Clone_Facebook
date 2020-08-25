@@ -1,0 +1,147 @@
+/* section */
+.section-3 {
+    position: relative;
+    display: flex;
+}
+.section-3 .section-menu {
+    box-shadow: 2px 0px 5px 2px #e5e5e5; 
+    z-index: 2;
+}
+
+/* section-2 ul, li태그 초기화 */
+.section-3 .container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 10px;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.section-3 .container .item {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.section-3 .container .item:hover {
+    border-radius: 10px;
+    background-color: #e5e5e5;
+}
+.section-3 .container li:nth-child(3) {
+    height: 52px;
+}
+.section-3 .container li:nth-child(4) {
+    height: 52px;
+    background-color: rgb(234, 243, 255);
+    border-radius: 10px;
+}
+.container:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* add group button */
+.container .groupAdd_btn {
+    width: 100%;
+    height: 52px;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.container .groupAdd_btn button {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(234, 243, 255);
+    color: #1876f2;
+    border: none;
+    border-radius: 10px 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.container .groupAdd_btn button:hover {
+    background-color: rgb(221, 230, 241);
+}
+
+.container h3 {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.item .square_item {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.item .item-text h5 {
+    color: #65676B;
+    font-weight: 300;
+}
+
+
+
+.section-3 .section-main {
+    padding-right: 10px;
+}
+.section-3 .main-container {
+    max-width: 1200px;
+    box-sizing: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+}
+/* 텍스터 타이틀 */
+.main-container h4 {
+    color: #65676B;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+/* 사진 텍스터 */
+.main-container .main-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    column-gap: 10px;
+}
+.main-group .group-box {
+    position: relative;
+    width: 100%;
+    height: 99%;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px #e5e5e5;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.main-group .group-box .group-img {
+    width: 100%;
+}
+.main-group .group-box .group-text {
+    width: 100%;
+    padding: 10px;
+}
+.group-box .group-text h4 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #65676B;
+    margin-bottom: 30px;
+}
+.group-box .group-text h5 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #65676B;
+}
+.group-box .group-text button {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.group-box .group-text button:hover {
+    background-color: #e5e5e5;
+}

@@ -1,0 +1,15 @@
+/* 메인 기준점 및 크기 */
+.section-3 .section-main {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+
+/* grid 개수 3개만 보이기 */
+.main-container .main-group {
+    grid-template-columns: repeat(3 , 1fr);
+}
+
+.main-group .group-box:nth-child(4) {
+    display: none;
+}
