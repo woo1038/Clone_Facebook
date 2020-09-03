@@ -7,9 +7,9 @@
 * 반응형 페이스북 웹사이트(클론코딩)
 
 ### 주요기능
-1. 페이지별 애니메이션
++ 페이지별 애니메이션
 ![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/15353850/92084806-e191de80-ee02-11ea-8f11-22c0888fdc71.gif)
-2. 반응형 웹사이트
++ 반응형 웹사이트
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/15353850/92084733-c921c400-ee02-11ea-8d82-2c8308080d91.gif)
 
 
